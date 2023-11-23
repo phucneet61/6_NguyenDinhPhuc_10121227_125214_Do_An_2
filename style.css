@@ -5,13 +5,16 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: rgb(27 25 60 / 48%);
     color: #fff;
     padding: 10px 0;
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* opacity: 60%; */
+    position: sticky;
+    top: 0px;
 }
 
 .logo {
@@ -37,7 +40,12 @@ nav ul li a {
     width: 100%;
     max-height: 300px;
 }
-
+body {
+    background-image: url(/light-rain-reason-official-wallpaper-genshin.jpg);
+    background-size: cover; /* Hiển thị hình ảnh mà không bị biến dạng */
+    background-repeat: no-repeat; /* Ngăn chặn lặp lại hình ảnh */
+    background-attachment: fixed; /* Giữ hình ảnh ở vị trí cố định khi cuộn trang */
+}
 .product-list {
     display: flex;
     flex-wrap: wrap;
@@ -46,21 +54,50 @@ nav ul li a {
 }
 
 .product-card {
+    border-radius: 30px;
     width: 300px;
     margin: 20px;
     padding: 20px;
     border: 1px solid #ccc;
     text-align: center;
+    background-color: #EFE5DA;
 }
 
 .news {
-    background-color: #f5f5f5;
+    background-color: rgb(27 25 60 / 58%);
+    /* opacity: 80%; */
     padding: 20px;
 }
-
+.news-article>img{
+    opacity: 100%;
+}
+.product-card:hover img{
+    transform: scale(1.2);
+}
 .news-article {
+
     margin-bottom: 20px;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 0px solid #ccc;
     text-align: center;
+    color:#fff;
+}
+.product-card .buy-button{
+    width: 200px;
+    height: 50px;
+    background-color: #3D7DD9;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50px ;
+    border:0px #fff solid;
+    
+}
+footer{
+    background-color: rgb(27 25 60 / 58%);
+    margin: 0px;
+    color: #fff;
+}
+footer>p{
+    margin: 0px;
 }
