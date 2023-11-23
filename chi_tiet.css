@@ -1,0 +1,127 @@
+header {
+    background-color: rgb(27 25 60 / 48%);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* opacity: 60%; */
+    position: sticky;
+    top: 0px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li { 
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(/light-rain-reason-official-wallpaper-genshin.jpg);
+    background-size: cover; /* Hiển thị hình ảnh mà không bị biến dạng */
+    background-repeat: no-repeat; /* Ngăn chặn lặp lại hình ảnh */
+    background-attachment: fixed; /* Giữ hình ảnh ở vị trí cố định khi cuộn trang */
+}
+
+.product-detail-container {
+    display: flex;
+    max-width: 800px;
+    margin: 20px auto;
+    backdrop-filter: blur(20px);
+}
+
+.product-image {
+    flex: 1;
+}
+
+.product-image img {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.product-details {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #fff;
+}
+
+
+.price {
+    font-size: 1.5em;
+    color: #e44d26;
+    margin-bottom: 10px;
+}
+
+.options-form {
+    margin-top: 20px;
+}
+
+.options-form {
+    margin-top: 20px;
+}
+
+.highlight-button {
+    background-color: #fff;
+    color: #333;
+    padding: 8px 12px; /* Thay đổi giá trị này để kiểm soát khoảng trắng xung quanh văn bản */
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Đảm bảo rằng nút sẽ co lại theo độ dài của chữ */
+.width-auto {
+    width: auto;
+    display: inline-block;
+}
+
+.highlight-button:hover, .highlight-button:focus {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.highlight-button:hover, .highlight-button:focus {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.buy-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background-color: #2980b9;
+}
