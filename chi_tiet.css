@@ -9,6 +9,12 @@ header {
     /* opacity: 60%; */
     position: sticky;
     top: 0px;
+    backdrop-filter: blur(20px);
+}
+
+.logo a{
+    text-decoration: none;
+    color: #fff;
 }
 
 .logo {
@@ -45,18 +51,19 @@ body {
 
 .product-detail-container {
     display: flex;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 20px auto;
     backdrop-filter: blur(20px);
 }
 
 .product-image {
     flex: 1;
+    max-width: 400px;
 }
 
 .product-image img {
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     border: 1px solid #ccc;
     border-radius: 8px;
 }
@@ -65,12 +72,15 @@ body {
     flex: 1;
     padding: 20px;
     box-sizing: border-box;
+    
 }
 
 h2 {
     color: #fff;
 }
-
+p{
+    color: #fff;
+}
 
 .price {
     font-size: 1.5em;
@@ -80,11 +90,9 @@ h2 {
 
 .options-form {
     margin-top: 20px;
+    /* text-align: center; */
 }
 
-.options-form {
-    margin-top: 20px;
-}
 
 .highlight-button {
     background-color: #fff;
@@ -116,12 +124,38 @@ h2 {
 .buy-button {
     background-color: #3498db;
     color: #fff;
-    padding: 10px;
+    padding: 15px 30px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 20px;
 }
 
 .buy-button:hover {
     background-color: #2980b9;
 }
+
+.product-description {
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    /* background-color: rgba(255, 255, 255, 0.8);*/ /*Màu nền với độ trong suốt */
+    border-radius: 8px;
+    margin-top: 20px;
+    backdrop-filter: blur(20px);
+    margin: 0 auto;
+}
+
+.product-description h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.product-description p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.5;
+    text-align: justify; /* Canh đều văn bản */
+}
+
