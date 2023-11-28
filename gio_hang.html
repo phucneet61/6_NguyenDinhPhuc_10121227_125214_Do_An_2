@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng - Phúc Đình Game Shop</title>
+    <link rel="stylesheet" href="gio_hang.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html">Phúc Đình Game Shop</a></div>
+        <nav>
+            <ul>
+                <li><a href="#tin-tuc">Tin tức</a></li>
+                <li><a href="#">Nạp thẻ</a></li>
+                <li><a href="gio_hang.html">Giỏ hàng</a></li>
+                <li><a href="dang_nhap.html">Đăng nhập</a></li>
+                <li><a href="dang_ky.html">Đăng ký</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="cart">
+        <h1>Giỏ hàng của bạn</h1>
+        <div class="cart-items" id="cartItems">
+            <!-- Thông tin về sản phẩm trong giỏ hàng sẽ được thêm ở đây bằng JavaScript -->
+        </div>
+        <div class="cart-total">
+            <p id="cartTotal">Tổng cộng: 0.00</p>
+            <button class="checkout-button" onclick="checkout()">Thanh toán</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Phúc Đình Game Shop. All rights reserved.</p>
+    </footer>
+
+    <script src="gio_hang.js"></script>
+</body>
+
+</html>

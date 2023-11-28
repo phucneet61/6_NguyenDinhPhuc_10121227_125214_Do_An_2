@@ -30,28 +30,35 @@
         </div>
 
         <div class="product-details">
-            <h2>Đá sáng thế</h2>
-            <p class="price">$50.00</p>
-            <p>Đá sáng thế</p>
+            <h2>Liên Quân Mobile</h2>
+            <p class="price" id="productPrice">10.000</p>
+            <p>Liên Quân Mobile</p>
             <form class="options-form">
-                <div class="highlight-button width-auto" tabindex="0" onclick="selectOption('10k')">Quân huy × 20</div>
-                <div class="highlight-button width-auto" tabindex="0" onclick="selectOption('20k')">Quân huy × 40</div>
-                <div class="highlight-button width-auto" tabindex="0" onclick="selectOption('50k')">Quân huy × 102</div>
-                <div class="highlight-button width-auto" tabindex="0" onclick="selectOption('100k')">Quân huy × 204</div>
-                <div class="highlight-button width-auto" tabindex="0" onclick="selectOption('200k')">Quân huy × 408</div>
-                <div class="highlight-button width-auto" tabindex="0" onclick="selectOption('500k')">Quân huy × 1020</div>
-                <div class="highlight-button width-auto" tabindex="0" onclick="selectOption('1m')">Quân huy × 2090</div>
-                <div class="highlight-button width-auto" tabindex="0" onclick="selectOption('2m')">Quân huy × 4180</div>
+                <div class="highlight-button width-auto" tabindex="0" onclick="selectOption('10k', 10000)">Quân huy × 20</div>
+                <div class="highlight-button width-auto" tabindex="0" onclick="selectOption('20k', 20000)">Quân huy × 40</div>
+                <div class="highlight-button width-auto" tabindex="0" onclick="selectOption('50k', 50000)">Quân huy × 102</div>
+                <div class="highlight-button width-auto" tabindex="0" onclick="selectOption('100k', 100000)">Quân huy × 204</div>
+                <div class="highlight-button width-auto" tabindex="0" onclick="selectOption('200k', 200000)">Quân huy × 408</div>
+                <div class="highlight-button width-auto" tabindex="0" onclick="selectOption('500k', 500000)">Quân huy × 1020</div>
+                <div class="highlight-button width-auto" tabindex="0" onclick="selectOption('1m', 1000000)">Quân huy × 2090</div>
+                <div class="highlight-button width-auto" tabindex="0" onclick="selectOption('2m', 2000000)">Quân huy × 4180</div>
                 <br>
-                <button class="buy-button">Mua Ngay</button>
+                <button class="buy-button" onclick="buyNow()">Mua Ngay</button>
             </form>
         </div>
     </div>
 
     <script>
-        function selectOption(option) {
+        function selectOption(option, price) {
             // Xử lý khi lựa chọn được nhấp
-            console.log("Chọn thẻ: " + option);
+            console.log("Chọn gói quân huy: " + option);
+            // Cập nhật giá theo mệnh giá tương ứng
+            updatePrice(price);
+        }
+        
+        function updatePrice(price) {
+            // Cập nhật nút giá
+            document.getElementById('productPrice').textContent = price.toLocaleString('vi-VN');
         }
 
         function buyNow() {
