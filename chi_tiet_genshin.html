@@ -17,7 +17,7 @@
                 <li><a href="#">Sản phẩm</a></li> -->
                 <li><a href="#tin-tuc">Tin tức</a></li>
                 <li><a href="#">Liên hệ</a></li>
-                <li><a href="#">Giỏ hàng</a></li>
+                <li><a href="gio_hang.html">Giỏ hàng</a></li>
                 <li><a href="dang_nhap.html">Đăng nhập</a></li>
                 <li><a href="dang_ky.html">Đăng ký</a></li>
             </ul>
@@ -41,22 +41,33 @@
                 <div class="highlight-button width-auto" tabindex="0" onclick="selectOption('1099k', 1099000)">3280 Đá sáng thế</div>
                 <div class="highlight-button width-auto" tabindex="0" onclick="selectOption('2199k', 2199000)">6480 Đá sáng thế</div>
                 <br>
-                <button class="buy-button" onclick="buyNow()">Nạp</button>
+                <button class="buy-button" onclick="AddGioHang()">Nạp</button>
             </form>
         </div>
     </div>
 
+
+
     <div class="product-description">
         <h3>Mô Tả Sản Phẩm</h3>
         <p>
-            TBA
+            Genshin Impact là trò chơi hành động nhập vai do miHoYo phát triển, được phát hành lần đầu vào ngày 28 tháng 9 năm 2020. Genshin Impact là tựa game mới được miHoYo phát triển tiếp nối sau series Honkai Impact
         </p>
     </div>
 
-    <script>
+    <script src="gio_hang.js"></script>
+
+    <!-- <script>
+        var selectedProduct = null;  // Biến lưu trữ sản phẩm được chọn
+        var cart = [];  // Mảng chứa sản phẩm trong giỏ hàng
         function selectOption(option, price) {
             // Xử lý khi lựa chọn được nhấp
             console.log("Chọn gói đá sáng thể: " + option);
+            // Lưu thông tin sản phẩm được chọn
+            selectedProduct = {
+            option: option,
+            price: price
+            };
             // Cập nhật giá theo mệnh giá tương ứng
             updatePrice(price);
         }
@@ -65,10 +76,81 @@
             // Cập nhật nút giá
             document.getElementById('productPrice').textContent = price.toLocaleString('vi-VN');
         }
-
+        
+        function saveCartToSessionStorage() {
+            sessionStorage.setItem('cart', JSON.stringify(cart));
+        }
+        
+        
+        
         function buyNow() {
             // Xử lý khi nút "Mua Ngay" được nhấp
             console.log("Mua Ngay");
+            if (selectedProduct) {
+                // Thêm sản phẩm vào giỏ hàng
+                cart.push(selectedProduct);
+                // Cập nhật thông tin giỏ hàng và giao diện người dùng
+                updateCart();
+                
+            } else {
+                console.error("Vui lòng chọn một sản phẩm trước khi thêm vào giỏ hàng.");
+            }
+        }
+
+        function updateCart() {
+            console.log("Cập nhật giỏ hàng");
+            // Tính tổng giá trị của giỏ hàng
+            var total = cart.reduce(function (sum, product) {
+                return sum + product.price;
+            }, 0);
+
+             // Hiển thị tổng giá trị trên giao diện
+             document.getElementById('cartTotal').textContent = 'Tổng cộng: ' + total.toFixed(2);
+        }
+
+         
+
+    </script> -->
+
+    <script>
+        // Đảm bảo hàm selectOption đã được định nghĩa ở đây
+    
+        var selectedProduct = null;
+        var cart = [];
+    
+        function selectOption(option, price) {
+            console.log("Chọn gói đá sáng thể: " + option);
+            selectedProduct = {
+                option: option,
+                price: price
+            };
+            updatePrice(price);
+        }
+    
+        function updatePrice(price) {
+            document.getElementById('productPrice').textContent = price.toLocaleString('vi-VN');
+        }
+    
+        function saveCartToSessionStorage() {
+            sessionStorage.setItem('cart', JSON.stringify(cart));
+        }
+    
+        function buyNow() {
+            console.log("Mua Ngay");
+            if (selectedProduct) {
+                cart.push(selectedProduct);
+                updateCart();
+            } else {
+                console.error("Vui lòng chọn một sản phẩm trước khi thêm vào giỏ hàng.");
+            }
+        }
+    
+        function updateCart() {
+            console.log("Cập nhật giỏ hàng");
+            var total = cart.reduce(function (sum, product) {
+                return sum + product.price;
+            }, 0);
+            document.getElementById('cartTotal').textContent = 'Tổng cộng: ' + total.toFixed(2);
         }
     </script>
 </body>

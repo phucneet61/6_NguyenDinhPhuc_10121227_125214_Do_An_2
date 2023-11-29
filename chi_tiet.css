@@ -116,10 +116,7 @@ p{
     color: #fff;
 }
 
-.highlight-button:hover, .highlight-button:focus {
-    background-color: #3498db;
-    color: #fff;
-}
+
 
 .buy-button {
     background-color: #3498db;
